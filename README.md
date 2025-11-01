@@ -1,5 +1,5 @@
 # proj_Lookvike
-** Hecho a las carreras, organizado por el GPT
+** Hecho a las carreras, organizado por el compa GPT
 ```mermaid
 classDiagram
     %% ===== Clases principales =====
