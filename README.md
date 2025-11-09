@@ -115,6 +115,7 @@ class KroonoScore {
 
 ## Comparativa
 ```mermaid
+classDiagram
     class Comparador {
     - listaMotos : List~Moto~
     - motosSeleccionadas : List~Moto~
