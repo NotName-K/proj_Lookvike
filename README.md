@@ -205,7 +205,7 @@ classDiagram
     Comparador --> Moto : compara
     Comparador --> KroonoScore : integra
 ```
-### General
+## General
 Aqui se muestra el funcionamiento de las clases antes descritas:
 ```mermaid
 classDiagram
