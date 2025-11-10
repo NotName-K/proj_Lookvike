@@ -351,4 +351,18 @@ DB  --> "many" Moto : gestiona
     Moto <|-- MotoTouring
     Moto <|-- MotoScooter
 
-``` 
+```
+## Estructura del code
+```
+look_vike/
+├── core/
+│   ├── __init__.py
+│   └── moto.py      
+├── services/
+│   ├── buscador.py
+│   ├── comparador.py
+│   └── scoring.py
+├── data/
+│   └── database.csv
+└── main.py
+```
