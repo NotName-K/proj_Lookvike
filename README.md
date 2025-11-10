@@ -374,8 +374,7 @@ look_vike/
 │   ├── buscador.py
 │   ├── comparador.py
 │   └── scoring.py              # KronoScore
-│
-│
+|
 └── interface/                  # Interfaz de usuario
     ├── __init__.py
     ├── menus.py
