@@ -182,6 +182,7 @@ classDiagram
     KroonoScore --> Moto : evalúa
     Comparador --> KroonoScore : utiliza
 ```
+### Calculo de la calificación
 
 ## Comparativa
 Permite contrastar múltiples motocicletas simultáneamente, mostrando diferencias técnicas y generando visualizaciones para facilitar la decisión final del usuario.
