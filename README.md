@@ -183,6 +183,106 @@ classDiagram
     Comparador --> KroonoScore : utiliza
 ```
 ### Calculo de la calificación
+Tal cual como se menciona en el pasado punto, el algoritmo Kroono_Score evualua 5 parametros, que a su vez poseen sus propios parametros:
+
+#### Rendimiento
+- HP
+- Top Speed
+- Suspensión
+- Torque
+- Trasmisión
+- Peso
+    
+#### Diseño y Materiales
+- Tipo Chasis
+- Estética
+- Instrumentos
+
+
+#### Confort y Consumo
+- Altura
+- Autonomía
+- Consumo
+- Tanque
+- Comodidad
+- Ergonomía
+- 
+#### Confiabilidad
+- Fiabilidad de la Marca
+- $ de Mantenimiento estimado
+- Repuestos
+- Reventa
+- Gravedad de Fallas comunes
+  
+#### Seguridad
+- Tipos de Frenos
+- Iluminación
+- Neumáticos
+- Asistencias Electrónicas
+
+Donde cada sub parametro recibe una calificación del 1-10 según el algoritmo, siendo el puntaje del parametro el promedio de sus subparámetros.
+
+Tomaremos el ejemplo de la Pulsar NS 200, donde el algoritmo puntua de la siguiente forma:
+
+```python
+# Rendimiento
+
+• HP: 24.5 HP @ 9750 rpm → 8/10 
+• Top Speed: ~136 km/h → 7/10  
+• Suspensión: Nitrox trasero, delantera telescópica → 7/10
+• Torque: 18.6 Nm @ 8000 rpm → 7/10
+• Transmisión: 6 velocidades → 9/10
+• Peso: 156 kg  → 9/10
+
+Promedio: (8+7+7+7+9+9)/6 = 47/6 = 7.83 → 7.8/10
+
+# Diseño
+
+• Tipo Chasis: Perimetral de acero  → 8/10
+• Estética: Deportiva  → 8/10
+• Instrumentos: Digital-analógico → 7/10
+
+Promedio: (8+8+7)/3 = 30/4 = 7.6 → 7.6/10
+
+# Confort y Consumo
+
+• Altura:  → 6/10
+• Autonomía: ~300 km  → 7/10
+• Consumo: 30-35 km/L  → 8/10
+• Tanque: 12 L  → 7/10
+• Comodidad: Deportiva pero soportable → 7/10
+• Ergonomía: → 7/10
+
+Promedio: (6+7+8+7+7+7)/6 = 7.0 → 7.0/10
+
+# Confiabilidad
+
+• Fiabilidad de la Marca: Bajaj → 7/10
+• $ Mantenimiento: Económico vs competencia → 8/10
+• Repuestos: Disponibilidad media → 6/10
+• Reventa: Buena en su segmento → 7/10
+• Gravedad Fallas: Problemas eléctricos menores → 6/10
+
+Promedio: (7+8+6+7+6)/5 = 34/5 = 6.8 → 6.8/10
+
+# Seguridad
+
+• Tipos de Frenos: Disco 280mm/del, 230mm/tras, ABS → 8/10
+• Iluminación: Faros LED DRL (buena) → 8/10
+• Neumáticos: MRF Zapper (decentes) → 6/10
+• Asistencias: ABS mono canal (básico) → 6/10
+
+Promedio: (8+8+6+6)/4 = 28/4 = 7.0 → 7.0/10
+```
+Una vez hecho esto, se calcula el promedio general y el precio promedio de una moto de la misma cilidrada.
+Calculamos el cociente de precio como el cociente entre el precio real y el precio promedio
+
+Aplicado al ejemplo...
+
+```python
+Cociente = 13.2/12.9
+KronoScore = (7.22 × 10) ÷ 1.02 = 7.05/10
+```
 
 ## Comparativa
 Permite contrastar múltiples motocicletas simultáneamente, mostrando diferencias técnicas y generando visualizaciones para facilitar la decisión final del usuario.
